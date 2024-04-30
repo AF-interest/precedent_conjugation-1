@@ -3,7 +3,6 @@ import urllib.request as req
 import urllib
 import os
 import time
-from urllib.parse import urljoin
 
 # 現在のディレクトリ取得
 dirname = os.getcwd()
@@ -39,6 +38,7 @@ while True:
             
             # 対象のpdfをダウンロードし、保存
             urllib.request.urlretrieve(pdf_url, pdf_path)
+            print(pdf_path)
             # 連続アクセス防止
             time.sleep(3)
             pdf_count = 1
